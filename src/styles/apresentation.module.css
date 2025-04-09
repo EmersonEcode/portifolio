@@ -1,0 +1,87 @@
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10%;
+}
+
+.intro{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5%;
+    
+}
+.introText{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.apresentationParagraph{
+    font-size: 25px;
+    font-weight: bold;
+}
+.namecodeParagraph {
+    font-family: 'Monda', sans-serif;
+    font-size: 50px; /* menor pra evitar quebrar em telas pequenas */
+    font-weight: bold;
+    color: #FF0000;
+    text-align: center;
+  }
+
+  
+
+.logo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+
+.foto{
+    width: 50%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+}
+
+.angularIcon {
+    position: absolute;
+    top: 260px;
+    left: 200px;
+    width: 140px;
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 0s;
+  }
+  
+  .javascriptIcon {
+    position: absolute;
+    bottom: 50px;
+    right: 140px;
+    width: 100px;
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 1.5s;
+  }
+  
+  .typescriptIcon {
+    position: absolute;
+    top: 0px;
+    right: 180px;
+    width: 90px;
+    animation: float 5s ease-in-out infinite;
+    animation-delay: 3s;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-25px);
+    }
+  }
+  
