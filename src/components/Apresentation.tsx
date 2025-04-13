@@ -10,7 +10,7 @@ export const Apresentation = () => {
     
     return (
         <section className={styles.section}>
-            <div className={styles.intro}>
+            <article className={styles.intro}>
                 <div className={styles.introText}>
                     <p className={styles.apresentationParagraph}>Eae , eu sou</p>
                 </div>
@@ -19,7 +19,7 @@ export const Apresentation = () => {
                             words={[
                                 '<Emerson />',
                             '<Frontend Developer/>',
-                            '<Apaixonado Por Código/>',
+                            '<Apaixonado Por Tech/>',
                             
                             ]}
                             loop
@@ -31,14 +31,14 @@ export const Apresentation = () => {
                         />
                     </p>
                 
-            </div>
+            </article>
 
-            <div className={styles.logo}>
+            <article className={styles.logo}>
                 <img className={styles.foto} src={myfoto} alt="minha foto em um lugar legal" />
                 <img className={styles.angularIcon} src={AngularIcon} alt="Icone do Angular flutuando" />
                 <img className={styles.javascriptIcon} src={JavascriptIcon} alt="Icone do Javascript flutuando" />
                 <img className={styles.typescriptIcon} src={TypeScriptIcon} alt="Icone do Typescript flutuando" />
-                </div>
+            </article>
         </section>
     )
 }
