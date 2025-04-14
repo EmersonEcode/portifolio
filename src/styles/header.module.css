@@ -49,6 +49,13 @@ header {
     width: 100%;
     padding: 0;
     margin: 0;
+
+  }
+  
+
+ a {
+    text-decoration: none;
+    color: white;
   }
   
   li {
@@ -59,26 +66,68 @@ header {
     text-align: center;
   }
   
-  .navContact > ol > li a {
+  .navContact > ol > li > .linkEmail {
     text-decoration: none;
     width: 100%;
-    border: solid 2px rgba(224, 1, 1, 1);
+    border: solid 2px rgba(224, 1, 1, 0.7); /* Bordas com transparência */
     padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background-color: rgba(224, 1, 1, 0.1); /* Fundo sutil */
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navContact > ol > li > .linkEmail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+  }
+  
+  .navContact > ol > li > .linkEmail:hover {
+    border-color: #70FF00;
+    color: #70FF00;
+    background-color: rgba(112, 255, 0, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navContact > ol > li > .linkEmail:hover::before {
+    left: 100%;
+  }
+  
+  .navContact > ol > li > .linkEmail:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
   }
   
   .navContact > ol > li a > span {
-    color: #fff;
+    color: inherit; /* Herda a cor do elemento pai */
     font-size: 0.75rem;
+    transition: color 0.3s ease;
+    z-index: 1; /* Garante que o texto fique acima do pseudo-elemento */
   }
   
-  .navContact > ol > li a:hover {
-    border: solid 2px #70FF00;
-    color: #70FF00;
+  /* Melhorias para mobile */
+  @media (max-width: 768px) {
+    .navContact > ol > li > .linkEmail {
+      padding: 0.5rem 0.3rem; /* Ajuste fino para mobile */
+    }
+    
+    .navContact > ol > li > .linkEmail:hover {
+      transform: none; /* Remove a elevação em mobile */
+    }
   }
   
   .icon {
@@ -92,6 +141,95 @@ header {
     font-size: 1.5rem;
     color: white;
     margin: 0;
+  }
+
+  /* Estilização dos botões sociais */
+.socialBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 2px solid transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* LinkedIn - Azul Profissional */
+  .socialBtn[href*="linkedin"] {
+    background-color: #7c9faf;
+    color: white;
+    box-shadow: 0 4px 6px rgba(14, 118, 168, 0.3),
+                0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* GitHub - Laranja queimado */
+  .socialBtn[href*="github"] {
+    background-color: #6e523f;
+    color: white;
+    box-shadow: 0 4px 6px rgba(114, 47, 1, 0.3),
+                0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Efeito hover para ambos */
+  .socialBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2),
+                0 3px 6px rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Efeito específico para LinkedIn no hover */
+  .socialBtn[href*="linkedin"]:hover {
+    box-shadow: 0 7px 14px rgba(14, 118, 168, 0.4),
+                0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Efeito específico para GitHub no hover */
+  .socialBtn[href*="github"]:hover {
+    box-shadow: 0 7px 14px rgba(114, 47, 1, 0.4),
+                0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Efeito ativo (quando clicado) */
+  .socialBtn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Versão para mobile */
+  @media (max-width: 768px) {
+    .socialBtn {
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+    }
+    
+    .socialBtn:hover {
+      transform: none; /* Remove elevação em mobile */
+    }
+    
+    /* Ajuste dos ícones no mobile */
+    .socialBtn svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  
+  /* Melhoria para telas muito pequenas */
+  @media (max-width: 480px) {
+    .socialBtn {
+      padding: 0.5rem 0.8rem;
+      font-size: 0.85rem;
+    }
+    
+    .socialBtn svg {
+      width: 20px;
+      height: 20px;
+    }
   }
   
   /* Media Queries para Responsividade */
@@ -162,7 +300,7 @@ header {
   }
   
   /* Celulares Pequenos */
-  @media (max-width: 400px) {
+  @media (max-width: 412px) {
     .navContact > ol > li a {
       width: 95%;
       padding: 0.3rem;
@@ -175,3 +313,18 @@ header {
       font-size: 0.6rem;
     }
   }
+
+  @media (max-width: 412px) {
+    .navContact > ol > li a {
+      width: 95%;
+      padding: 0.7rem;
+    }
+    .nav{
+        flex-direction: row;
+    }
+    
+    .navContact > ol > li a > span {
+      font-size: 0.6rem;
+    }
+  }
+

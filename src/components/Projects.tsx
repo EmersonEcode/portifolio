@@ -28,7 +28,7 @@ export const Projects = () => {
 
     return (
     <FadeIn direction="up" delay={0.5}>
-        <section className={styles.content}>
+        <section id="projects" className={styles.content}>
             <h2>Projetos<span>( )</span></h2>
             <section className={styles.contentList}>
                 <section className={styles.list}>

@@ -5,7 +5,7 @@ import { FadeIn } from "./animação/FadeIn";
 export const AboutMe = () =>{
     return (
         <FadeIn direction="left">
-            <section className={styles.content}>
+            <section id="about" className={styles.content}>
                 <h2>sobreMim<span>( )</span></h2>
             <article className={styles.aboutMe}>
                 <p>

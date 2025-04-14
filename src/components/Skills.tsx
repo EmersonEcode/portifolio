@@ -6,7 +6,7 @@ import { FadeIn } from "./animação/FadeIn";
 export const Skills = () => {
     return (
         <FadeIn direction="right"> 
-            <section className={styles.content}>
+            <section id="skills" className={styles.content}>
              <h2>habilidades<span>( )</span></h2>
                 <ol>
                 <li><FaHtml5 size={80} color="#e34c26" /></li>      
