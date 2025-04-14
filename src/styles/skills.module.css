@@ -1,0 +1,97 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 3.5rem;
+    background-color: #161616;
+    margin: 0;
+  }
+  
+  .content > h2 {
+    font-size: 2rem;
+    align-self: baseline;
+    color: #FF0000;
+    margin-bottom: 1rem;
+  }
+  
+  .content > h2 > span {
+    color: white;
+    font-size: 2rem;
+  }
+  
+  .content > ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem 2.5rem;
+    width: 70%;
+    align-self: baseline;
+  }
+  
+  .content > ol > li > img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .content > ol > li {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  @media (max-width: 1024px) {
+    .content {
+      padding: 2rem;
+    }
+    
+    .content > ol {
+      width: 85%;
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+      padding: 1.5rem;
+    }
+    
+    .content > h2,
+    .content > h2 > span {
+      font-size: 1.7rem;
+    }
+    
+    .content > ol {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    
+    .content > ol > li > img {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .content {
+      padding: 1rem;
+    }
+    
+    .content > h2,
+    .content > h2 > span {
+      font-size: 1.5rem;
+    }
+    
+    .content > ol {
+      gap: 1rem;
+    }
+    
+    .content > ol > li > img {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }

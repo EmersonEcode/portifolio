@@ -1,0 +1,147 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 3.5rem;
+    margin: 0;
+    align-items: center;
+}
+
+.content > h2{
+    font-size: 2rem;
+    align-self: baseline;
+    color: #FF0000;
+    margin-bottom: 2rem;
+}
+
+.content > h2 > span {
+    color:white;
+    font-size: 2rem;
+}
+
+.contentList {
+    width: 100%;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+   
+}
+
+.list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 0;
+}
+
+.list > .listItem {
+    background-color: #454444;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0.2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;   
+}
+.listItem:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.listItem > .imageContent {
+    width: 60%;
+    position: relative;
+    align-items: center;
+    display: flex;
+}
+.listItem > .infoContent {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.infoContent > p {
+    text-align: justify;
+    margin: 20px;
+}
+
+.imageContent > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.2rem;
+    object-fit: cover;
+}
+
+
+.listStacks{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+@media (max-width: 1024px) {
+    .content {
+      padding: 2rem;
+    }
+  
+    .list {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    .listItem {
+      flex-direction: column !important;
+      min-height: auto;
+    }
+  
+    .listItem > .imageContent,
+    .listItem > .infoContent {
+      width: 100% !important;
+    }
+  
+    .imageContent > img {
+      max-height: 200px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+      padding: 1.5rem;
+    }
+  
+    .content > h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    .content > h2 > span {
+      font-size: 1.5rem;
+    }
+  
+    .list {
+      gap: 1rem;
+    }
+  
+    .listItem {
+      padding: 0.8rem;
+    }
+  
+    .infoContent > p {
+      margin: 10px 0;
+      font-size: 0.9rem;
+    }
+  
+    .listStacks {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: flex-start;
+    }
+  }

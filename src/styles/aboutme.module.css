@@ -1,33 +1,79 @@
-.content{
+.content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 60px;
-}
-
-
-.content > h2{
+    padding: 3.5rem;
+    width: 100%;
+  }
+  
+  .content > h2 {
     font-size: 2rem;
     align-self: baseline;
     color: #FF0000;
     margin-bottom: 1rem;
-}
-
-.content > h2 > span {
-    color:white;
+  }
+  
+  .content > h2 > span {
+    color: white;
     font-size: 2rem;
-}
-
-.aboutMe{
+  }
+  
+  .aboutMe {
     display: flex;
     flex-direction: column;
     width: 50%;
-    
-}
-
-.aboutMe > p{
+  }
+  
+  .aboutMe > p {
     text-align: justify;
     line-height: 1.5rem;
     font-size: 1.0625rem;
-}
-
+  }
+  
+  @media (max-width: 1024px) {
+    .content {
+      padding: 2.5rem;
+    }
+    
+    .aboutMe {
+      width: 70%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+      padding: 2rem;
+    }
+    
+    .content > h2,
+    .content > h2 > span {
+      font-size: 1.7rem;
+    }
+    
+    .aboutMe {
+      width: 85%;
+    }
+    
+    .aboutMe > p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .content {
+      padding: 1.5rem;
+    }
+    
+    .content > h2,
+    .content > h2 > span {
+      font-size: 1.5rem;
+    }
+    
+    .aboutMe {
+      width: 100%;
+    }
+    
+    .aboutMe > p {
+      font-size: 0.9375rem;
+      line-height: 1.4rem;
+    }
+  }

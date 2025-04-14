@@ -4,86 +4,168 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 1% 4%;
-    align-items: center;
-}
-
-.logo{
+    padding: 1rem 4%;
+    background-color: #161616;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .logo {
     width: 25%;
     display: flex;
-    flex-direction: row;
-    justify-content: baseline;
-}
-
-.navContact{
+    align-items: center;
+  }
+  
+  .navContact {
     display: flex;
     flex-direction: row;
     width: 35%;
     align-items: center;
     font-family: 'Roboto', sans-serif;
-}
-.nav {
+  }
+  
+  .nav {
     display: flex;
     flex-direction: row;
     width: 28%;
     align-items: center;
-    
-}
-
-.navContact > ol > li{
+  }
+  
+  .navContact > ol > li {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin-right: 10px;
-    width: 33%;
+    width: 100%;
     cursor: pointer;
-   
-}
-ol {
+  }
+  
+  ol {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     list-style: none;
     width: 100%;
-
-}
-
-li{
-    font-size: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    font-size: 1rem;
     font-weight: bold;
     width: 100%;
     cursor: pointer;
-}
-
-.navContact > ol > li a{
+    text-align: center;
+  }
+  
+  .navContact > ol > li a {
     text-decoration: none;
     width: 100%;
     border: solid 2px rgba(224, 1, 1, 1);
-    padding: 5%;
+    padding: 0.5rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     border-radius: 10px;
-    
-}
-.navContact > ol > li a > span{
+    transition: all 0.3s ease;
+  }
+  
+  .navContact > ol > li a > span {
     color: #fff;
-    font-size: 75%;
-}
-.navContact > ol > li a:hover{
+    font-size: 0.75rem;
+  }
+  
+  .navContact > ol > li a:hover {
     border: solid 2px #70FF00;
     color: #70FF00;
-}
-
-.icon{
-  stroke: white;
-  fill: red;
-  color: transparent;
-  -webkit-text-stroke: 1px white;
-}
-
-h1{
-    font-size:40px;
-}
+  }
+  
+  .icon {
+    stroke: white;
+    fill: red;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+  }
+  
+  /* Media Queries para Responsividade */
+  
+  /* Tablets */
+  @media (max-width: 1024px) {
+    .logo {
+      width: 30%;
+    }
+    
+    .navContact {
+      width: 40%;
+    }
+    
+    .nav {
+      width: 30%;
+    }
+    
+    li {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Tablets Pequenos */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      padding: 1rem 5%;
+    }
+    
+    .logo, .navContact, .nav {
+      width: 100%;
+      justify-content: center;
+      margin: 0.5rem 0;
+    }
+    
+    .navContact > ol > li {
+      margin-right: 5px;
+    }
+    
+    .navContact > ol > li a {
+      padding: 0.5rem 0.3rem;
+    }
+  }
+  
+  /* Celulares Grandes */
+  @media (max-width: 576px) {
+    ol {
+      flex-direction: column;
+    }
+    
+    .navContact > ol > li {
+      margin: 0.3rem 0;
+      width: 100%;
+    }
+    
+    .navContact > ol > li a {
+      width: 80%;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Celulares Pequenos */
+  @media (max-width: 400px) {
+    .navContact > ol > li a {
+      width: 95%;
+      padding: 0.3rem;
+    }
+    
+    .navContact > ol > li a > span {
+      font-size: 0.6rem;
+    }
+  }

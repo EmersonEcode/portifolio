@@ -1,87 +1,241 @@
-section{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 10%;
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5%;
+  height: 90%;
 }
 
-.intro{
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1.5%;
-    
-}
-.introText{
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
+.intro {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5%;
 }
 
-.apresentationParagraph{
-    font-size: 25px;
-    font-weight: bold;
+.introText {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;  
 }
+
+.apresentationParagraph {
+  font-size: 25px;
+  font-weight: bold;
+}
+
 .namecodeParagraph {
-    font-family: 'Monda', sans-serif;
-    font-size: 50px; /* menor pra evitar quebrar em telas pequenas */
-    font-weight: bold;
-    color: #FF0000;
-    text-align: center;
-  }
-
-  
-
-.logo{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+  font-family: 'Monda', sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  color: #FF0000;
+  text-align: center;
 }
 
+.logo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
 
-.foto{
-    width: 50%;
-    height: 100%;
-    border-radius: 50%;
-    display: block;
+.foto {
+  width: 50%;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: block;
 }
 
 .angularIcon {
-    position: absolute;
-    top: 260px;
-    left: 200px;
+  position: absolute;
+  width: 140px;
+  top: 260px;
+  left: 200px;
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 0s;
+  transition: all 0.3s ease;
+}
+
+.javascriptIcon {
+  position: absolute;
+  width: 100px;
+  bottom: 50px;
+  right: 140px;
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 1.5s;
+  transition: all 0.3s ease;
+}
+
+.typescriptIcon {
+  position: absolute;
+  width: 90px;
+  top: 0px;
+  right: 180px;
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 3s;
+  transition: all 0.3s ease;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-25px); }
+}
+
+/* Media Queries completas */
+@media (max-width: 1440px) {
+  .angularIcon {
+    width: 120px;
+    top: 220px;
+    left: 180px;
+  }
+  .javascriptIcon {
+    width: 90px;
+    right: 120px;
+  }
+  .typescriptIcon {
+    width: 80px;
+    right: 150px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .angularIcon {
+    width: 110px;
+    top: 200px;
+    left: 160px;
+  }
+  .javascriptIcon {
+    width: 80px;
+    bottom: 40px;
+    right: 110px;
+  }
+  .typescriptIcon {
+    width: 70px;
+    top: 10px;
+    right: 130px;
+  }
+}
+
+@media (max-width: 992px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  
+  .intro, .logo {
+    width: 80%;
+  }
+  
+  .foto {
+    width: 40%;
+  }
+  
+  .angularIcon {
     width: 140px;
-    animation: float 6s ease-in-out infinite;
-    animation-delay: 0s;
+    top: 220px;
+    left: 220px;
   }
   
   .javascriptIcon {
-    position: absolute;
-    bottom: 50px;
-    right: 140px;
-    width: 100px;
-    animation: float 6s ease-in-out infinite;
-    animation-delay: 1.5s;
+    bottom: 30px;
+    width: 110px;
+    right: 180px;
   }
   
   .typescriptIcon {
-    position: absolute;
-    top: 0px;
-    right: 180px;
     width: 90px;
-    animation: float 5s ease-in-out infinite;
-    animation-delay: 3s;
+    right: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro, .logo {
+    width: 90%;
   }
   
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-25px);
-    }
+  .namecodeParagraph {
+    font-size: 40px;
   }
   
+  .foto {
+    width: 50%;
+  }
+  
+  .angularIcon {
+    width: 120px;
+    top: 220px;
+    left: 180px;
+  }
+  
+  .javascriptIcon {
+    width: 100px;
+    right: 140px;
+  }
+  
+  .typescriptIcon {
+    width: 80px;
+    right: 160px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .intro, .logo {
+    width: 95%;
+  }
+  
+  .apresentationParagraph {
+    font-size: 20px;
+  }
+  
+  .namecodeParagraph {
+    font-size: 32px;
+  }
+  
+  .foto {
+    width: 60%;
+  }
+  
+  .angularIcon {
+    width: 70px;
+    top: 140px;
+    left: 140px;
+  }
+  
+  .javascriptIcon {
+    width: 60px;
+    bottom: 40px;
+    right: 80px;
+  }
+  
+  .typescriptIcon {
+    width: 50px;
+    top: 20px;
+    right: 100px;
+  }
+}
+
+
+@media (max-width: 470px) {
+  .angularIcon {
+    width: 100px;
+    top: 200px;
+    left: 120px;
+  }
+  
+  .javascriptIcon {
+    width: 90px;
+    right: 70px;
+    bottom: 30px;
+  }
+  
+  .typescriptIcon {
+    width: 70px;
+    right: 80px;
+    
+  }
+}
