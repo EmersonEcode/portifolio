@@ -140,7 +140,10 @@ header {
   /* Celulares Grandes */
   @media (max-width: 576px) {
     ol {
-      flex-direction: column;
+      flex-direction: row;
+    }
+    .nav > ol{
+        display: none;
     }
     
     .navContact > ol > li {
@@ -163,6 +166,9 @@ header {
     .navContact > ol > li a {
       width: 95%;
       padding: 0.3rem;
+    }
+    .nav{
+        flex-direction: row;
     }
     
     .navContact > ol > li a > span {
