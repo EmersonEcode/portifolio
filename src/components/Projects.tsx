@@ -20,7 +20,7 @@ export const Projects = () => {
                     color: 'white'
                 }    
             ],
-            img: '/images/psn-site.png'
+            img: './images/psn-site.png'
         },
     ]
 
