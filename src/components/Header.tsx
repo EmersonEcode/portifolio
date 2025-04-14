@@ -15,8 +15,8 @@ export const Header = () => {
             </nav>
             <nav className={styles.navContact}>
                 <ol>
-                    <li className={styles.li}><FaLinkedin size={30} color="#0e76a8" />Linkedin</li>
-                    <li className={styles.li}><FaGithub size={30} color="#722f01" />GitHub</li>
+                    <li className={styles.li}><FaLinkedin size={28} color="#0e76a8" />Linkedin</li>
+                    <li className={styles.li}><FaGithub size={28} color="#722f01" />GitHub</li>
                     <li className={styles.li}><a className={styles.a} href="#"><MdOutlineEmail size={25} className={styles.icon}  /><span>Contact me</span></a></li>
                 </ol>
             </nav>
