@@ -3,6 +3,7 @@ import { FadeIn } from "./animação/FadeIn";
 import styles from '../styles/projects.module.css';
 import { color } from "framer-motion";
 
+
 export const Projects = () => {
 
     const projetos = [
@@ -20,7 +21,8 @@ export const Projects = () => {
                     color: 'white'
                 }    
             ],
-            img: './images/psn-site.png'
+            img: './images/psn-site.png',
+            link: 'https://emersonecode.github.io/psn-store/'
         },
     ]
 
@@ -34,7 +36,8 @@ export const Projects = () => {
                 <section className={styles.list}>
                 {
                     projetos.map((item , index) => (
-                        <div key={index} className={styles.listItem}>
+                        
+                        <div key={index} className={styles.listItem} onClick={() => window.open(item.link, "_blank")}>
                             <div className={styles.imageContent}>
                                 <img src={item.img} alt="" />
                             </div>
@@ -50,6 +53,7 @@ export const Projects = () => {
                                 </div>
                             </div>
                         </div>
+                        
                      ) )
                 }
             </section>
