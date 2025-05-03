@@ -14,11 +14,11 @@ export const Projects = () => {
             stacks: [
                 {
                     stack: 'Angular',
-                    color: 'white'
+                    color: '#dd0031'
                 },
                 {
                     stack: 'Typescript',
-                    color: 'white'
+                    color: '#3178C6'
                 }    
             ],
             img: './images/psn-site.png',
@@ -31,15 +31,15 @@ export const Projects = () => {
             stacks: [
                 {
                     stack: 'Angular',
-                    color: 'white'
+                    color: '#dd0031'
                 },
                 {
                     stack: 'Typescript',
-                    color: 'white'
+                    color: '#3178C6'
                 }    
             ],
             img: './images/buzz-feed.png',
-            link: 'https://emersonecode.github.io/psn-store/'
+            link: 'https://emersonecode.github.io/buzz-feed/'
         },
     ]
 
@@ -63,7 +63,12 @@ export const Projects = () => {
                                 <p>{item.descricao}</p>
                                 <div className={styles.listStacks}> 
                                     {item.stacks.map((item, index) => (
-                                        <div key={index}>
+                                        <div style={{
+                                            padding: '5px',
+                                            backgroundColor: item.color,
+                                            borderRadius: '5px',
+                                            color: 'black'
+                                        }} key={index}>
                                             {item.stack}
                                         </div>
                                     ))}
