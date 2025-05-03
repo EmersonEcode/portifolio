@@ -67,7 +67,7 @@ export const Projects = () => {
                                             padding: '5px',
                                             backgroundColor: item.color,
                                             borderRadius: '5px',
-                                            color: 'black'
+                                            color: 'white'
                                         }} key={index}>
                                             {item.stack}
                                         </div>
