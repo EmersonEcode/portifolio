@@ -3,7 +3,6 @@ import { FadeIn } from "./animação/FadeIn";
 import styles from '../styles/projects.module.css';
 import { color } from "framer-motion";
 
-
 export const Projects = () => {
 
     const projetos = [
@@ -23,24 +22,7 @@ export const Projects = () => {
             ],
             img: './images/psn-site.png',
             link: 'https://emersonecode.github.io/psn-store/'
-        },
-        {
-            id: 1,
-            titulo: 'Buzz Feed',
-            descricao: 'Quiz Interativo. Aprendi a desenvolver um quiz interativo em Angular, usando componentes, diretivas, ciclo de vida e binding para exibir e atualizar dados dinamicamente.',
-            stacks: [
-                {
-                    stack: 'Angular',
-                    color: '#dd0031'
-                },
-                {
-                    stack: 'Typescript',
-                    color: '#3178C6'
-                }    
-            ],
-            img: './images/buzz-feed.png',
-            link: 'https://emersonecode.github.io/buzz-feed/'
-        },
+        }
     ]
 
 
