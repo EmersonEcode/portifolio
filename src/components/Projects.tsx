@@ -22,6 +22,23 @@ export const Projects = () => {
             ],
             img: './images/psn-site.png',
             link: 'https://emersonecode.github.io/psn-store/'
+        },
+        {   
+            id: 2,
+            titulo: 'Cripto',
+            descricao: 'Projeto em React para exibir dados de criptomoedas em tempo real, com integração de APIs (CoinGecko, Staking Rewards) e cache inteligente via localStorage. Aprendi sobre consumo de APIs, otimização de performance e criação de interfaces reativas com componentes reutilizáveis.',
+            stacks: [
+                {
+                    stack: 'React',
+                    color: '#61DAFB'
+                },
+                {
+                    stack: 'Typescript',
+                    color: '#3178C6'
+                }    
+            ],
+            img: './images/psn-site.png',
+            link: 'https://emersonecode.github.io/cripto/'
         }
     ]
 
