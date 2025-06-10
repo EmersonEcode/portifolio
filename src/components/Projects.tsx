@@ -1,7 +1,6 @@
 import React from "react";
 import { FadeIn } from "./animação/FadeIn";
 import styles from '../styles/projects.module.css';
-import { color } from "framer-motion";
 
 export const Projects = () => {
 
@@ -13,15 +12,54 @@ export const Projects = () => {
             stacks: [
                 {
                     stack: 'Angular',
-                    color: 'white'
+                    color: '#dd0031'
                 },
                 {
                     stack: 'Typescript',
-                    color: 'white'
+                    color: '#3178C6'
                 }    
             ],
-            img: './images/psn-site.png'
+            img: './images/psn-site.png',
+            link: 'https://emersonecode.github.io/psn-store/'
         },
+        {   
+            id: 2,
+            titulo: 'Cripto',
+            descricao: 'Projeto em React para exibir dados de criptomoedas em tempo real, com integração de APIs (CoinGecko, Staking Rewards) e cache inteligente via localStorage. Aprendi sobre consumo de APIs, otimização de performance e criação de interfaces reativas com componentes reutilizáveis.',
+            stacks: [
+                {
+                    stack: 'React',
+                    color: '#61DAFB'
+                },
+                {
+                    stack: 'Typescript',
+                    color: '#3178C6'
+                }    
+            ],
+            img: './images/cripto.png',
+            link: 'https://emersonecode.github.io/cripto/'
+        },
+        {   
+            id: 3,
+            titulo: 'edunova',
+            descricao: 'Projeto de Prototipagem e Usabilidade da Faculdade objetivo criar validações de formulários.Fazer o criar atualizar listar e deletar. Fazer o filtrar lista e paginação. Foi usado o Angular usando os conhecimentos de componentização, rotas, services,Data binding,Diretivas estruturais e atributivas,Formulários reativos, localStorage, SessionStorage, Bibliotecas do Angular',
+            stacks: [
+                 {
+                    stack: 'Angular',
+                    color: '#dd0031'
+                },
+                {
+                    stack: 'Typescript',
+                    color: '#3178C6'
+                },
+                 {
+                    stack: 'Sass',
+                    color: '#fd335f'
+                },   
+            ],
+            img: './images/edunova.png',
+            link: 'https://edunova-jade.vercel.app/'
+        }
     ]
 
 
@@ -34,7 +72,8 @@ export const Projects = () => {
                 <section className={styles.list}>
                 {
                     projetos.map((item , index) => (
-                        <div key={index} className={styles.listItem}>
+                        
+                        <div key={index} className={styles.listItem} onClick={() => window.open(item.link, "_blank")}>
                             <div className={styles.imageContent}>
                                 <img src={item.img} alt="" />
                             </div>
@@ -43,13 +82,19 @@ export const Projects = () => {
                                 <p>{item.descricao}</p>
                                 <div className={styles.listStacks}> 
                                     {item.stacks.map((item, index) => (
-                                        <div key={index}>
+                                        <div style={{
+                                            padding: '5px',
+                                            backgroundColor: item.color,
+                                            borderRadius: '5px',
+                                            color: 'white'
+                                        }} key={index}>
                                             {item.stack}
                                         </div>
                                     ))}
                                 </div>
                             </div>
                         </div>
+                        
                      ) )
                 }
             </section>

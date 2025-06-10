@@ -21,7 +21,6 @@ export const Apresentation = () => {
                                 words={[
                                     '<Emerson />',
                                 '<Frontend Developer/>',
-                                '<Apaixonado Por Tech/>',
                                 
                                 ]}
                                 loop
