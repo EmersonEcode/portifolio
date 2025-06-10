@@ -4,6 +4,8 @@
     padding: 3.5rem;
     margin: 0;
     align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .content > h2 {
@@ -11,6 +13,7 @@
     align-self: flex-start;
     color: #FF0000;
     margin-bottom: 2rem;
+    width: 100%;
 }
 
 .content > h2 > span {
@@ -33,64 +36,101 @@
     margin: 0;
 }
 
-.list > .listItem {
+.listItem {
     background-color: #454444;
-    padding: 1rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     border-radius: 0.5rem;
-    min-height: 250px;
+    min-height: 280px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
-    gap: 1rem;
+    gap: 1.5rem;
+    overflow: hidden;
 }
 
 .listItem:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #3a3a3a;
 }
 
-.listItem > .imageContent {
+.imageContent {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.imageContent > img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
+    min-width: 0;
     border-radius: 0.5rem;
-    object-fit: cover;
+    overflow: hidden;
+    aspect-ratio: 1365/647;
 }
 
-.listItem > .infoContent {
-    flex: 1.5;
+.imageContent img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.listItem:hover .imageContent img {
+    transform: scale(1.03);
+}
+
+.infoContent {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 0.8rem;
-    padding: 1rem;
+    gap: 1rem;
+    padding: 0.5rem 0;
 }
 
-.infoContent > p {
+.infoContent h3 {
+    font-size: 1.4rem;
+    margin: 0 0 0.8rem 0;
+    color: #FF0000;
+}
+
+.infoContent p {
     text-align: justify;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.6;
     word-spacing: 1px;
+    margin: 0;
+    color: #e0e0e0;
 }
 
 .listStacks {
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: space-around;
-    padding: 10px;
+    justify-content: flex-start;
+    padding: 0;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.stackBadge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .content {
+        padding: 3rem;
+    }
+    
+    .listItem {
+        min-height: 260px;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -100,22 +140,16 @@
 
     .list {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.8rem;
     }
 
     .listItem {
-        flex-direction: column;
-        min-height: auto;
+        flex-direction: row;
+        min-height: 240px;
     }
 
-    .listItem > .imageContent,
-    .listItem > .infoContent {
-        width: 100%;
-        flex: none;
-    }
-
-    .imageContent > img {
-        max-height: 200px;
+    .imageContent {
+        flex: 0 0 45%;
     }
 }
 
@@ -123,30 +157,29 @@
     .content {
         padding: 1.5rem;
     }
-
-    .content > h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .content > h2 > span {
-        font-size: 1.5rem;
-    }
-
-    .list {
-        gap: 1rem;
-    }
-
+    
     .listItem {
-        padding: 0.8rem;
+        flex-direction: column;
+        min-height: auto;
+        gap: 1.2rem;
     }
-
-    .infoContent > p {
-        margin: 10px 0;
-        font-size: 0.9rem;
+    
+    .imageContent {
+        flex: none;
+        width: 100%;
+        aspect-ratio: 1365/647;
+        max-height: 250px;
     }
-
-    .listStacks {
-        justify-content: flex-start;
+    
+    .content > h2 {
+        font-size: 1.7rem;
+    }
+    
+    .content > h2 > span {
+        font-size: 1.7rem;
+    }
+    
+    .infoContent h3 {
+        font-size: 1.3rem;
     }
 }
