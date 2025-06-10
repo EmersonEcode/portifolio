@@ -24,6 +24,10 @@ jobs:
       - name: Build React app
         run: npm run build
 
+      # Só para debug, remova depois
+      - name: Debug Secrets
+        run: echo "GH_TOKEN is ${{ secrets.GH_TOKEN }}"
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
