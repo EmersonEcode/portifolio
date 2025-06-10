@@ -36,7 +36,7 @@
     margin: 0;
 }
 
-.list > .listItem {
+.listItem {
     background-color: #454444;
     padding: 1.5rem;
     display: flex;
@@ -45,7 +45,7 @@
     border-radius: 0.5rem;
     min-height: 280px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
     gap: 1.5rem;
     overflow: hidden;
@@ -54,9 +54,10 @@
 .listItem:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #3a3a3a;
 }
 
-.listItem > .imageContent {
+.imageContent {
     flex: 1;
     display: flex;
     align-items: center;
@@ -67,18 +68,18 @@
     aspect-ratio: 1365/647;
 }
 
-.imageContent > img {
+.imageContent img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease;
 }
 
-.listItem:hover .imageContent > img {
+.listItem:hover .imageContent img {
     transform: scale(1.03);
 }
 
-.listItem > .infoContent {
+.infoContent {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -87,13 +88,13 @@
     padding: 0.5rem 0;
 }
 
-.infoContent > h3 {
+.infoContent h3 {
     font-size: 1.4rem;
     margin: 0 0 0.8rem 0;
     color: #FF0000;
 }
 
-.infoContent > p {
+.infoContent p {
     text-align: justify;
     font-size: 1rem;
     line-height: 1.6;
@@ -114,13 +115,14 @@
 }
 
 .stackBadge {
-    background-color: #FF0000;
-    color: white;
     padding: 0.3rem 0.8rem;
     border-radius: 1rem;
     font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
 }
 
+/* Responsividade */
 @media (max-width: 1200px) {
     .content {
         padding: 3rem;
@@ -162,7 +164,7 @@
         gap: 1.2rem;
     }
     
-    .listItem > .imageContent {
+    .imageContent {
         flex: none;
         width: 100%;
         aspect-ratio: 1365/647;
@@ -177,25 +179,7 @@
         font-size: 1.7rem;
     }
     
-    .infoContent > h3 {
+    .infoContent h3 {
         font-size: 1.3rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .content {
-        padding: 1.2rem;
-    }
-    
-    .imageContent {
-        max-height: 220px;
-    }
-    
-    .infoContent > p {
-        font-size: 0.95rem;
-    }
-    
-    .stackBadge {
-        font-size: 0.8rem;
     }
 }
