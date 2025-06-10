@@ -1,7 +1,6 @@
 import React from "react";
 import { FadeIn } from "./animação/FadeIn";
 import styles from '../styles/projects.module.css';
-import { color } from "framer-motion";
 
 export const Projects = () => {
 
@@ -37,8 +36,29 @@ export const Projects = () => {
                     color: '#3178C6'
                 }    
             ],
-            img: './images/psn-site.png',
+            img: './images/cripto.png',
             link: 'https://emersonecode.github.io/cripto/'
+        },
+        {   
+            id: 3,
+            titulo: 'edunova',
+            descricao: 'Projeto de Prototipagem e Usabilidade da Faculdade objetivo criar validações de formulários.Fazer o criar atualizar listar e deletar. Fazer o filtrar lista e paginação. Foi usado o Angular usando os conhecimentos de componentização, rotas, services,Data binding,Diretivas estruturais e atributivas,Formulários reativos, localStorage, SessionStorage, Bibliotecas do Angular',
+            stacks: [
+                 {
+                    stack: 'Angular',
+                    color: '#dd0031'
+                },
+                {
+                    stack: 'Typescript',
+                    color: '#3178C6'
+                },
+                 {
+                    stack: 'Sass',
+                    color: '#fd335f'
+                },   
+            ],
+            img: './images/edunova.png',
+            link: 'https://edunova-jade.vercel.app/'
         }
     ]
 
