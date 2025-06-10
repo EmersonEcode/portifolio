@@ -1,6 +1,6 @@
 import React from "react";
 import styles from '../styles/skills.module.css';
-import { FaReact, FaJs, FaCode, FaAngular, FaHtml5, FaCss3, FaLinux} from "react-icons/fa";
+import { FaReact, FaJs, FaAngular, FaHtml5, FaCss3, FaLinux} from "react-icons/fa";
 import { SiTypescript } from 'react-icons/si';
 import { FadeIn } from "./animação/FadeIn";
 export const Skills = () => {
