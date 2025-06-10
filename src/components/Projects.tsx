@@ -48,56 +48,40 @@ export const Projects = () => {
             <section id="projects" className={styles.content}>
                 <h2>Projetos<span>( )</span></h2>
                 
-                <div className={styles.contentList}>
-                    <div className={styles.list}>
-                        {projetos.map((item) => (
-                            <article 
-                                key={item.id} 
-                                className={styles.listItem} 
-                                onClick={() => window.open(item.link, "_blank")}
-                                aria-label={`Projeto ${item.titulo}`}
-                            >
-                                <div className={styles.imageContent}>
-                                    <img 
-                                        src={item.img} 
-                                        alt={`Captura de tela do projeto ${item.titulo}`} 
-                                        loading="lazy"
-                                    />
-                                </div>
+                <div className={styles.list}>
+                    {projetos.map((item) => (
+                        <article 
+                            key={item.id} 
+                            className={styles.listItem} 
+                            onClick={() => window.open(item.link, "_blank")}
+                        >
+                            <div className={styles.imageContainer}>
+                                <img 
+                                    src={item.img} 
+                                    alt={`Captura do projeto ${item.titulo}`} 
+                                    loading="lazy"
+                                />
+                            </div>
+                            
+                            <div className={styles.textContent}>
+                                <h3>{item.titulo}</h3>
+                                <p>{item.descricao}</p>
                                 
-                                <div className={styles.infoContent}>
-                                    <h3>{item.titulo}</h3>
-                                    <p>{item.descricao}</p>
-                                    
-                                    <div className={styles.listStacks}>
-                                        {item.stacks.map((tech, idx) => (
-                                            <span 
-                                                key={idx}
-                                                className={styles.stackBadge}
-                                                style={{ 
-                                                    backgroundColor: tech.color,
-                                                    color: getContrastColor(tech.color)
-                                                }}
-                                            >
-                                                {tech.stack}
-                                            </span>
-                                        ))}
-                                    </div>
+                                <div className={styles.techTags}>
+                                    {item.stacks.map((tech, idx) => (
+                                        <span 
+                                            key={idx}
+                                            style={{ backgroundColor: tech.color }}
+                                        >
+                                            {tech.stack}
+                                        </span>
+                                    ))}
                                 </div>
-                            </article>
-                        ))}
-                    </div>
+                            </div>
+                        </article>
+                    ))}
                 </div>
             </section>
         </FadeIn>
     )
-}
-
-// Função auxiliar para determinar cor do texto com melhor contraste
-function getContrastColor(hexColor:any) {
-    const r = parseInt(hexColor.substr(1, 2), 16);
-    const g = parseInt(hexColor.substr(3, 2), 16);
-    const b = parseInt(hexColor.substr(5, 2), 16);
-    const brightness = (r * 299 + g * 587 + b * 114) / 1000;
-    return brightness > 128 ? '#000000' : '#FFFFFF';
 }
