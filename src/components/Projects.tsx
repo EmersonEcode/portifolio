@@ -42,7 +42,7 @@ export const Projects = () => {
         {   
             id: 3,
             titulo: 'edunova',
-            descricao: 'Projeto de Prototipagem e Usabilidade da Faculdade objetivo criar validações de formulários.Fazer o criar atualizar listar e deletar. Fazer o filtrar lista e paginação. Foi usado o Angular usando os conhecimentos de componentização, rotas, services,Data binding,Diretivas estruturais e atributivas,Formulários reativos, localStorage, SessionStorage, Bibliotecas do Angular',
+            descricao: 'Projeto de Prototipagem e Usabilidade da Faculdade objetivo criar validações de formulários. Fazer o criar atualizar listar e deletar. Fazer o filtrar lista e paginação. Foi usado o Angular usando os conhecimentos de componentização, rotas, services,Data binding,Diretivas estruturais e atributivas,Formulários reativos, localStorage, SessionStorage, Bibliotecas do Angular',
             stacks: [
                  {
                     stack: 'Angular',
