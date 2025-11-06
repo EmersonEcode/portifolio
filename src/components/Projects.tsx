@@ -4,7 +4,22 @@ import styles from '../styles/projects.module.css';
 
 export const Projects = () => {
     const projetos = [
-        {   
+        {    
+            id: 4,
+            titulo: 'Ecode Blog',
+            descricao: 'Blog full-stack completo. O frontend em Angular 17 (Standalone) possui SEO dinâmico, Dark Mode com Glassmorphism, filtros de tag e animações. O backend é uma API RESTful com Node.js, Express e Mongoose, conectada ao MongoDB Atlas. O deploy é automatizado com GitHub Actions.',
+            stacks: [
+                { stack: 'Angular', color: '#dd0031' },
+                { stack: 'TypeScript', color: '#3178C6' },
+                { stack: 'Node.js', color: '#68A063' },
+                { stack: 'MongoDB', color: '#47A248' },
+                { stack: 'CI/CD', color: '#FF6B6B' }
+            ],
+            img: './images/blog.png',
+            link: 'https://blog-ecode.vercel.app/blog'
+        },
+        // ======================================
+        {    
             id: 1,
             titulo: 'Psn Store',
             descricao: 'Interface da PlayStation Store. O objetivo foi treinar a componentização no Angular e aplicar conceitos de UI/UX em um layout inspirado em e-commerce.',
@@ -16,7 +31,7 @@ export const Projects = () => {
             img: './images/psn-site.png',
             link: 'https://emersonecode.github.io/psn-store/'
         },
-        {   
+        {    
             id: 2,
             titulo: 'Cripto',
             descricao: 'Projeto em React para exibir dados de criptomoedas em tempo real, com integração de API (CoinGecko) e cache inteligente via localStorage.',
@@ -28,7 +43,7 @@ export const Projects = () => {
             img: './images/cripto.png',
             link: 'https://emersonecode.github.io/cripto/'
         },
-        {   
+        {    
             id: 3,
             titulo: 'Edunova',
             descricao: 'Sistema educacional com CRUD completo, validações de formulários, filtros e paginação. Desenvolvido com Angular aplicando conceitos avançados de componentização e gerenciamento de estado.',
@@ -49,7 +64,8 @@ export const Projects = () => {
                 <h2>Projetos<span>( )</span></h2>
                 
                 <div className={styles.list}>
-                    {projetos.map((item) => (
+                    {/* O .sort() garante que os projetos apareçam em ordem (4, 3, 2, 1) */}
+                    {projetos.sort((a, b) => b.id - a.id).map((item) => (
                         <article 
                             key={item.id} 
                             className={styles.listItem} 

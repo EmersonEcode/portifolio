@@ -1,79 +1,109 @@
 .content {
-    display: flex;
-    flex-direction: column;
-    padding: 3.5rem;
-    width: 100%;
-  }
-  
-  .content > h2 {
-    font-size: 2rem;
-    align-self: baseline;
-    color: #FF0000;
-    margin-bottom: 1rem;
-  }
-  
-  .content > h2 > span {
-    color: white;
-    font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3.5rem;
+  width: 100%;
+}
+
+.content > h2 {
+  font-size: 2rem;
+  align-self: baseline;
+  color: #FF0000;
+  margin-bottom: 1rem;
+}
+
+.content > h2 > span {
+  color: white;
+  font-size: 2rem;
+}
+
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  max-width: 70ch; 
+}
+
+.aboutMe > p {
+  text-align: left;
+  line-height: 1.6;
+  font-size: 1.0625rem;
+  color: #ffffff;
+}
+
+.aboutMe > p + p {
+   margin-top: 1rem;
+}
+
+.skillsTitle {
+  font-size: 1.25rem;
+  color: #FF0000;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.skillsList {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.skillsList > li {
+  background-color: #858181;
+  color: #444;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    padding: 2.5rem;
   }
   
   .aboutMe {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+     max-width: 80%; 
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 2rem;
+  }
+  
+  .content > h2,
+  .content > h2 > span {
+    font-size: 1.7rem;
+  }
+  
+  .aboutMe {
+    max-width: 90%; 
   }
   
   .aboutMe > p {
-    text-align: justify;
-    line-height: 1.5rem;
-    font-size: 1.0625rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 1.5rem;
   }
   
-  @media (max-width: 1024px) {
-    .content {
-      padding: 2.5rem;
-    }
-    
-    .aboutMe {
-      width: 70%;
-    }
+  .content > h2,
+  .content > h2 > span {
+    font-size: 1.5rem;
   }
   
-  @media (max-width: 768px) {
-    .content {
-      padding: 2rem;
-    }
-    
-    .content > h2,
-    .content > h2 > span {
-      font-size: 1.7rem;
-    }
-    
-    .aboutMe {
-      width: 85%;
-    }
-    
-    .aboutMe > p {
-      font-size: 1rem;
-    }
+  .aboutMe {
+    max-width: 100%;
   }
   
-  @media (max-width: 480px) {
-    .content {
-      padding: 1.5rem;
-    }
-    
-    .content > h2,
-    .content > h2 > span {
-      font-size: 1.5rem;
-    }
-    
-    .aboutMe {
-      width: 100%;
-    }
-    
-    .aboutMe > p {
-      font-size: 0.9375rem;
-      line-height: 1.4rem;
-    }
+  .aboutMe > p {
+    font-size: 0.9375rem;
+    line-height: 1.5;
   }
+}
