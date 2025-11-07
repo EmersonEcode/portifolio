@@ -1,10 +1,11 @@
+/* Seus estilos originais */
 section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center; /* Adicionado para centralizar verticalmente */
   margin-top: 5%;
   height: 90%;
-
 }
 
 .intro {
@@ -32,10 +33,69 @@ section {
   font-weight: bold;
   color: #FF0000;
   text-align: center;
+  white-space: nowrap; /* --- MUDANÇA 1: Impede a quebra de linha --- */
 }
 
+/* === NOVOS ESTILOS === */
+
+.subHeadline {
+  font-size: 1.1rem;
+  color: #c0c0c0; /* Um cinza claro, não branco puro */
+  line-height: 1.6;
+  max-width: 500px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align: center; /* Alinhado com o restante do bloco */
+}
+
+.ctaContainer {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center; /* Alinhado com o restante do bloco */
+}
+
+.ctaButtonPrimary,
+.ctaButtonSecondary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.ctaButtonPrimary {
+  background-color: #FF0000; /* Sua cor de destaque */
+  color: white;
+  border: 1px solid #FF0000;
+}
+
+.ctaButtonPrimary:hover {
+  background-color: #cc0000;
+  transform: translateY(-2px);
+}
+
+.ctaButtonSecondary {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.ctaButtonSecondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* === Seus estilos originais === */
+
 .logo {
-  width: 50%;
+  width: 45%; /* --- MUDANÇA 2: Ajustado de 50% para 45% --- */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,15 +145,12 @@ section {
   50% { transform: translateY(-25px); }
 }
 
-/* Media Queries completas */
+/* === Media Queries ATUALIZADAS === */
+
 @media (min-width: 1440px) {
   .namecodeParagraph {
-  font-family: 'Monda', sans-serif;
-  font-size: 80px;
-  font-weight: bold;
-  color: #FF0000;
-  text-align: center;
-}
+    font-size: 80px;
+  }
   .angularIcon {
     width: 180px;
     top: 320px;
@@ -108,16 +165,22 @@ section {
     width: 120px;
     right: 220px;
   }
+  
+  /* NOVO */
+  .subHeadline {
+    font-size: 1.25rem;
+  }
+  .ctaButtonPrimary, .ctaButtonSecondary {
+    font-size: 1.05rem;
+    padding: 0.85rem 1.75rem;
+  }
 }
 
 @media (max-width: 1200px) {
+  /* Seu 'font-size: 80px' aqui estava causando problemas */
   .namecodeParagraph {
-  font-family: 'Monda', sans-serif;
-  font-size: 80px;
-  font-weight: bold;
-  color: #FF0000;
-  text-align: center;
-}
+    font-size: 45px; /* Reduzido para caber */
+  }
   .angularIcon {
     width: 110px;
     top: 200px;
@@ -137,9 +200,10 @@ section {
 
 @media (max-width: 992px) {
   section {
-    flex-direction: column;
+    flex-direction: column-reverse; 
     align-items: center;
     height: auto;
+    gap: 3rem; /* --- MUDANÇA 3: Adiciona espaço entre imagem e texto --- */
   }
   
   .intro, .logo {
@@ -175,6 +239,7 @@ section {
   
   .namecodeParagraph {
     font-size: 40px;
+    white-space: normal; /* Permite quebrar linha no mobile se precisar */
   }
   
   .foto {
@@ -195,6 +260,15 @@ section {
   .typescriptIcon {
     width: 80px;
     right: 160px;
+  }
+  
+  /* NOVO */
+  .subHeadline {
+    font-size: 1rem;
+  }
+  .ctaButtonPrimary, .ctaButtonSecondary {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.4rem;
   }
 }
 
@@ -233,6 +307,15 @@ section {
     top: 20px;
     right: 100px;
   }
+  
+  /* NOVO: Empilha os botões */
+  .ctaContainer {
+    flex-direction: column;
+    align-items: stretch; /* Botões ocupam 100% da largura */
+  }
+  .subHeadline {
+    font-size: 0.9rem;
+  }
 }
 
 
@@ -253,6 +336,9 @@ section {
     width: 70px;
     right: 80px;
     
+  }
+   .namecodeParagraph {
+    font-size: 23px;
   }
 }
 
@@ -279,7 +365,7 @@ section {
   }
    
   .namecodeParagraph {
-    font-size: 28px;
+    font-size: 23px;
   }
   .apresentationParagraph {
     font-size: 18px;
@@ -293,7 +379,7 @@ section {
   }
   
   .namecodeParagraph {
-    font-size: 28px;
+    font-size: 23px;
   }
   
   .foto {

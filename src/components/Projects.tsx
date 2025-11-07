@@ -46,7 +46,7 @@ export const Projects = () => {
         {    
             id: 3,
             titulo: 'Edunova',
-            descricao: 'Sistema educacional com CRUD completo, validações de formulários, filtros e paginação. Desenvolvido com Angular aplicando conceitos avançados de componentização e gerenciamento de estado.',
+            descricao: 'Sistema com CRUD completo para materia da faculdade Prototipagem e Teste De Usabilidade usando validações de formulários, filtros e paginação. Desenvolvido com Angular aplicando conceitos avançados de componentização e gerenciamento de estado.',
             stacks: [
                 { stack: 'Angular', color: '#dd0031' },
                 { stack: 'Typescript', color: '#3178C6' },

@@ -3,6 +3,8 @@
   flex-direction: column;
   padding: 3.5rem;
   width: 100%;
+  align-items: flex-start;
+  background-color: rgb(64, 64, 66);
 }
 
 .content > h2 {
@@ -27,7 +29,7 @@
   text-align: left;
   line-height: 1.6;
   font-size: 1.0625rem;
-  color: #ffffff;
+  color: #d1cfcf;
 }
 
 .aboutMe > p + p {

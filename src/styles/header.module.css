@@ -19,7 +19,7 @@ header {
   .navContact {
     display: flex;
     flex-direction: row;
-    width: 35%;
+    width: 25%;
     align-items: center;
     font-family: 'Roboto', sans-serif;
   }
