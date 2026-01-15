@@ -4,6 +4,19 @@ import styles from '../styles/projects.module.css';
 
 export const Projects = () => {
     const projetos = [
+        {
+            id: 5,
+            titulo: 'Aconprev Assesoria | Auditoria Contábil e Gestão Previdenciária',
+            descricao: 'Interface moderna desenvolvida com Next.js e Tailwind CSS. Foco em alta performance, design responsivo e otimização de SEO.',
+            stacks: [
+                { stack: 'Next.js', color: '#000000' },
+                { stack: 'Tailwind CSS', color: '#38B2AC' },
+                { stack: 'TypeScript', color: '#3178C6' },
+                { stack: 'React', color: '#61DAFB' }
+            ],
+            img: './images/aconprev.png',
+            link: 'https://aconprevcontabilidade.com.br'
+        },
         {    
             id: 4,
             titulo: 'Ecode Blog',
@@ -16,7 +29,7 @@ export const Projects = () => {
                 { stack: 'CI/CD', color: '#FF6B6B' }
             ],
             img: './images/blog.png',
-            link: 'https://blog-ecode.vercel.app/blog'
+            link: 'https://ecode.blog'
         },
         // ======================================
         {    
